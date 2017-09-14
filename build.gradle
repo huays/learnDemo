@@ -1,4 +1,4 @@
-group 'concurrent'
+group 'learnjava'
 
 allprojects {
     apply plugin: 'idea'
