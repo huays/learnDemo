@@ -1,0 +1,55 @@
+group 'concurrent'
+
+allprojects {
+    apply plugin: 'idea'
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+    repositories {
+        mavenCentral()
+        maven { url "http://101.231.83.139:8081/nexus/content/repositories/releases/" }
+    }
+}
+
+
+subprojects {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    [compileJava]*.options*.encoding = 'UTF-8'
+
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked"
+        options.compilerArgs << "-Xlint:deprecation"
+    }
+
+}
+
+
+project.dependencies {
+
+    compile("com.alibaba:druid:1.0.26")
+
+    ext.mybatis = ["org.mybatis:mybatis:3.4.1"]
+
+    ext.mybatisSpring = ["org.mybatis:mybatis-spring:1.3.0"]
+
+    ext.guava = ["com.google.guava:guava:20.0"]
+
+    ext.jodaTime = ["joda-time:joda-time:2.9.4"]
+
+    ext.mysql = "mysql:mysql-connector-java:5.1.36"
+
+    ext.slf4j = ["org.slf4j:slf4j-log4j12:1.7.10", 'org.slf4j:jcl-over-slf4j:1.7.10']
+
+    ext.freemarker = ['org.freemarker:freemarker:2.3.22']
+
+    ext.jtar = ["org.kamranzafar:jtar:2.2"]
+
+    ext.common_io = ["commons-io:commons-io:2.5"]
+
+    compile guava, jodaTime, mybatis, slf4j ,
+            mysql, mybatisSpring ,
+            jtar, common_io, freemarker
+
+}
+
