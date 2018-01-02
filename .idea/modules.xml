@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/learn/learn.iml" filepath="$PROJECT_DIR$/learn/learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/learnDemo.iml" filepath="$PROJECT_DIR$/.idea/learnDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/learnDemo_main.iml" filepath="$PROJECT_DIR$/.idea/modules/learnDemo_main.iml" group="learnDemo" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/learnDemo_test.iml" filepath="$PROJECT_DIR$/.idea/modules/learnDemo_test.iml" group="learnDemo" />
     </modules>
   </component>
 </project>
